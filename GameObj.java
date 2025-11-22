@@ -6,14 +6,17 @@ public class GameObj {
     Image img;
     int x;
     int y;
-    int w=30;//固定大小
+    int w=30;
     int h=30;
-    GameWin frame;//定义名字
+    GameWin frame;
     public Image getImg(){
         return img;
     }
     public void setImg(Image img){
         this.img = img;
+    }
+    public int getX(){
+        return x;
     }
     public void setX(int x){
         this.x = x;
@@ -36,11 +39,11 @@ public class GameObj {
     public int getH(){
         return h;
     }
-    public void setGamewin(GameWin frame){  //名字
-        this.frame = frame; //名字
+    public void setFrame(GameWin frame){
+        this.frame = frame;
     }
-    public GameWin get(){
-        return frame; //名字
+    public GameWin getFrame(){
+        return frame;
     }
     public GameObj(){
 
@@ -59,7 +62,8 @@ public class GameObj {
         this.h = h;
         this.frame = frame;
     }
-    public void paintSelf(Graphics g){ //绘制自身
-        g.drawImage(img,x,y,frame);//图片img放到x,y位置
+    public void paintSelf(Graphics g){
+        g.drawImage(img,x,y,frame);
     }
+
 }
